@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "module": "ESNext",
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+  },
+  "include": ["src/**/*", "server/**/*"],
+  "exclude": ["node_modules"]
+}
