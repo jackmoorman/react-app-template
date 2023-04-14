@@ -7,7 +7,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, '/build'),
     filename: 'build.js',
-    publicPath: '/'
+    publicPath: '/',
   },
 
   devServer: {
@@ -15,15 +15,15 @@ module.exports = {
       '/api/**': {
         target: 'http://localhost:3000',
         secure: false,
-      }
+      },
     },
     historyApiFallback: true,
   },
 
   plugins: [
     new HTMLWebpackPlugin({
-      template: './src/index.html'
-    })
+      template: './src/index.html',
+    }),
   ],
 
   module: {
@@ -34,33 +34,33 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env', '@babel/preset-react']
-          }
-        }
+            presets: ['@babel/preset-env', '@babel/preset-react'],
+          },
+        },
       },
       {
         test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
-        use: ['ts-loader']
+        use: ['ts-loader'],
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
       },
       {
         test: /\.s[ac]ss$/i,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test: /\.(mp4|gif)$/,
         use: {
           loader: 'file-loader',
-        }
-      }
-    ]
+        },
+      },
+    ],
   },
 
   resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx']
-  }
-}
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+  },
+};
