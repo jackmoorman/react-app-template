@@ -51,7 +51,9 @@ export default function Home({}: Props) {
               </button>
             </div>
             <div className="flex flex-col items-center gap-3">
-              <p className="text-xl">Update State Locally With useState:</p>
+              <p className="text-xl">
+                Update State Globally With Redux Toolkit:
+              </p>
               <button
                 onClick={() => dispatch(increment())}
                 className=" bg-slate-500 h-10 w-10 flex justify-center items-center rounded hover:scale-105 transition-all text-3xl"

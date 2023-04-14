@@ -4,8 +4,11 @@
   "description": "Full-stack React application template using Webpack as the bundler",
   "main": "index.js",
   "scripts": {
+    "start": "node server/server.ts",
+    "build": "webpack --mode production",
     "dev": "webpack-dev-server --mode development --hot",
-    "server": "nodemon server/server.ts"
+    "server": "nodemon server/server.ts",
+    "both": "nodemon server/server.ts & webpack-dev-server --mode development --hot"
   },
   "keywords": [],
   "author": "Jack Moorman (Github: @jackmoorman)",
