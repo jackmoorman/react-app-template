@@ -3,7 +3,10 @@
     "jsx": "react",
     "module": "ESNext",
     "esModuleInterop": true,
-    "noImplicitAny": true,
+    "noImplicitAny": true
+  },
+  "ts-node": {
+    "esm": true
   },
   "include": ["src/**/*", "server/**/*"],
   "exclude": ["node_modules"]

@@ -1,6 +1,9 @@
 import express from 'express';
 import { Request, Response, NextFunction } from 'express';
-require('dotenv').config();
+//@ts-expect-error
+import * as dotenv from 'dotenv';
+dotenv.config();
+import apiRouter from './routers/apiRouter';
 const app = express();
 
 const PORT = process.env.PORT || 3000;
@@ -10,6 +13,14 @@ app.use(express.json());
 type ServerError = {
   err: Error;
 };
+
+app.use('/api', (req: Request, res: Response) => {
+  res.status(200).json({ message: 'API router GET is working' });
+});
+
+app.use('*', (req: Request, res: Response) => {
+  res.status(404).send('404 Not Found');
+});
 
 app.use(
   '/',
