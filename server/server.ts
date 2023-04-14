@@ -1,6 +1,5 @@
 import express from 'express';
 import { Request, Response, NextFunction } from 'express';
-//@ts-expect-error
 import * as dotenv from 'dotenv';
 dotenv.config();
 import apiRouter from './routers/apiRouter';
