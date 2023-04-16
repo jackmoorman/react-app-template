@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  dev:
+    image: react-app-webpack-dev
+    container_name: react-app-webpack-dev
+    ports:
+      - 8080:8080
+    volumes:
+      - .:/app
+      - node_modules:/app/node_modules
+    command: npm run both
+
+volumes:
+  node_modules:

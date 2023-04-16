@@ -1,0 +1,6 @@
+FROM node:18.15
+RUN npm install -g webpack
+WORKDIR /app
+COPY package*.json .
+RUN npm install
+EXPOSE 3000
