@@ -3,7 +3,9 @@
     "jsx": "react",
     "module": "CommonJS",
     "esModuleInterop": true,
-    "noImplicitAny": true
+    "target": "ES6",
+    "noImplicitAny": true,
+    "moduleResolution": "node"
   },
   "ts-node": {
     "esm": true
