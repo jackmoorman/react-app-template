@@ -5,9 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { increment, decrement } from '../features/countSlice';
 import { RootState } from '../app/store';
 
-type Props = {};
-
-export default function Home({}: Props) {
+export default function Home() {
   const [local, setLocal] = useState<number>(0);
   const globalCount = useSelector((state: RootState) => state.count);
   const dispatch = useDispatch();
